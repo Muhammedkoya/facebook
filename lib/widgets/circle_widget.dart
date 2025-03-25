@@ -26,7 +26,8 @@ class CircleWidget extends StatelessWidget {
                     )
                     : Border(),
           ),
-          padding: EdgeInsets.only(left: 5, right: 5),
+          margin: EdgeInsets.only(left: 10, right: 10),
+          // padding: EdgeInsets.only(left: 5, right: 5),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(100),
 
@@ -40,8 +41,8 @@ class CircleWidget extends StatelessWidget {
         ),
         displayStatus
             ? Positioned(
-              right: 4,
-              bottom: 3,
+              right: 8,
+              bottom: 4,
               child: Container(
                 width: 15,
                 height: 15,

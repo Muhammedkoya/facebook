@@ -20,7 +20,7 @@ class StoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 170,
+      width: 120,
       margin: EdgeInsets.only(left: 5, right: 5, top: 7, bottom: 7),
       decoration: BoxDecoration(
         color: Colors.black,

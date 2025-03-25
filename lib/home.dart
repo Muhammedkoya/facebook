@@ -1,8 +1,10 @@
+import 'package:facebook/assets.dart';
 import 'package:facebook/sections/header_button_section.dart';
 import 'package:facebook/sections/room_section.dart';
 import 'package:facebook/sections/status_section.dart';
 import 'package:facebook/sections/story_section.dart';
 import 'package:facebook/widgets/circular_button.dart';
+import 'package:facebook/widgets/post_card.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -51,6 +53,13 @@ class Home extends StatelessWidget {
             ThickDivider,
             StorySection(),
             ThickDivider,
+            PostCard(
+              displayImage: kendallJenner,
+              name: "Kendall Jenner",
+              postedAt: "5 hr",
+              postImage: kardashian,
+              postTitle: "With My Guys!!",
+            ),
           ],
         ),
       ),

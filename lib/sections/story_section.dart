@@ -6,7 +6,7 @@ class StorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250,
+      height: 200,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
