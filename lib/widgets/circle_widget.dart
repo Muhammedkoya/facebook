@@ -4,11 +4,15 @@ class CircleWidget extends StatelessWidget {
   final String displayImage;
   final bool displayStatus;
   final bool displayBorder;
+  final double width;
+  final double height;
 
   CircleWidget({
     required this.displayImage,
     required this.displayStatus,
     this.displayBorder = false,
+    this.height = 45,
+    this.width = 45,
   });
 
   @override
@@ -22,7 +26,7 @@ class CircleWidget extends StatelessWidget {
                 displayBorder
                     ? Border.all(
                       color: const Color.fromARGB(255, 68, 162, 255),
-                      width: 3,
+                      width: 2,
                     )
                     : Border(),
           ),
@@ -34,8 +38,8 @@ class CircleWidget extends StatelessWidget {
             child: Image.asset(
               fit: BoxFit.cover,
               displayImage,
-              width: 45,
-              height: 45,
+              width: width,
+              height: height,
             ),
           ),
         ),

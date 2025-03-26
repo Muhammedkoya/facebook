@@ -4,6 +4,7 @@ import 'package:facebook/sections/room_section.dart';
 import 'package:facebook/sections/status_section.dart';
 import 'package:facebook/sections/story_section.dart';
 import 'package:facebook/widgets/circular_button.dart';
+import 'package:facebook/widgets/header_button.dart';
 import 'package:facebook/widgets/post_card.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,32 @@ class Home extends StatelessWidget {
           children: [
             StatusSection(),
             ThinDivider,
-            HeaderButtonSection(),
+            HeaderButtonSection(
+              buttonOne: headerButton(
+                buttonIcon: Icons.video_call,
+                buttonColor: Colors.red,
+                buttonText: "Live",
+                buttonAction: () {
+                  print("Live Button Pressed");
+                },
+              ),
+              buttonTwo: headerButton(
+                buttonIcon: Icons.photo_library,
+                buttonColor: Colors.green,
+                buttonText: "Photo",
+                buttonAction: () {
+                  print("Phot Button Pressed");
+                },
+              ),
+              buttonThree: headerButton(
+                buttonIcon: Icons.video_call,
+                buttonColor: Colors.purple,
+                buttonText: "Room",
+                buttonAction: () {
+                  print("Room Button Pressed");
+                },
+              ),
+            ),
             ThickDivider,
             RoomSection(),
             ThickDivider,
@@ -59,7 +85,11 @@ class Home extends StatelessWidget {
               postedAt: "5 hr",
               postImage: kardashian,
               postTitle: "With My Guys!!",
+              likeCount: "1K",
+              commentCount: "2K",
+              shareCount: "1K",
             ),
+            ThickDivider,
           ],
         ),
       ),
