@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 class PostCard extends StatelessWidget {
   final String displayImage;
   final String name;
+  final bool showBlueTick;
   final String postedAt;
   final String postImage;
   final String postTitle;
@@ -24,6 +25,7 @@ class PostCard extends StatelessWidget {
     required this.commentCount,
     required this.likeCount,
     required this.shareCount,
+    this.showBlueTick = false,
   });
 
   @override
@@ -106,7 +108,7 @@ class PostCard extends StatelessWidget {
                 displayText("Shares"),
                 SizedBox(width: 5),
                 CircleWidget(
-                  displayImage: kendallJenner,
+                  displayImage: displayImage,
                   displayStatus: false,
                   width: 25,
                   height: 25,
@@ -133,7 +135,21 @@ class PostCard extends StatelessWidget {
   Widget PostTitle() {
     return Container(
       padding: EdgeInsets.only(bottom: 8),
-      child: Text(postTitle),
+      child:
+          (postTitle != null && postTitle != "")
+              ? Container(
+                padding: EdgeInsets.only(
+                  left: 10,
+                  right: 10,
+                  top: 4,
+                  bottom: 4,
+                ),
+                child: Text(
+                  postTitle,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              )
+              : SizedBox(),
     );
   }
 
@@ -155,7 +171,7 @@ class PostCard extends StatelessWidget {
         children: [
           Text(name, style: TextStyle(color: Colors.black)),
           SizedBox(width: 10),
-          BlueTick(),
+          showBlueTick ? BlueTick() : SizedBox(),
         ],
       ),
       subtitle: Row(

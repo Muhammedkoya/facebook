@@ -3,6 +3,7 @@ import 'package:facebook/sections/header_button_section.dart';
 import 'package:facebook/sections/room_section.dart';
 import 'package:facebook/sections/status_section.dart';
 import 'package:facebook/sections/story_section.dart';
+import 'package:facebook/sections/suggestion_section.dart';
 import 'package:facebook/widgets/circular_button.dart';
 import 'package:facebook/widgets/header_button.dart';
 import 'package:facebook/widgets/post_card.dart';
@@ -80,14 +81,53 @@ class Home extends StatelessWidget {
             StorySection(),
             ThickDivider,
             PostCard(
+              displayImage: zendaya,
+              name: "Zendaya",
+              showBlueTick: true,
+              postedAt: "5 hr ",
+              postTitle: "My Buddies😘",
+              postImage: zendayaAndFriends,
+              commentCount: "4K",
+              likeCount: "12K",
+              shareCount: "5K",
+            ),
+
+            ThickDivider,
+            PostCard(
+              displayImage: srk,
+              name: "i_am_srk",
+              showBlueTick: true,
+              postedAt: "1 day ago",
+              postImage: diwali,
+              postTitle: "",
+              likeCount: "3K",
+              commentCount: "2K",
+              shareCount: "2K",
+            ),
+            ThickDivider,
+            PostCard(
+              displayImage: henryCavill,
+              showBlueTick: true,
+              name: "Henry Cavill",
+              postedAt: "3 days ago",
+              postTitle:
+                  "Massive congrats to Brad Pitt and the F1 team! Bringing real racing to the big screen is no small feat, and I’ve got no doubt this film is going to be something special. Wishing you all the success—can’t wait to see it in action!",
+              postImage: f1,
+              commentCount: "5K",
+              likeCount: "7K",
+              shareCount: "3K",
+            ),
+            ThickDivider,
+            SuggestionSection(),
+            PostCard(
               displayImage: kendallJenner,
               name: "Kendall Jenner",
-              postedAt: "5 hr",
-              postImage: kardashian,
+              postedAt: "5 days ago",
+              postImage: kendallAndFriends,
               postTitle: "With My Guys!!",
-              likeCount: "1K",
-              commentCount: "2K",
-              shareCount: "1K",
+              likeCount: "23",
+              commentCount: "2",
+              shareCount: "0",
             ),
             ThickDivider,
           ],

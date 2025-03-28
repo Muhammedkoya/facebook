@@ -38,7 +38,7 @@ class StorySection extends StatelessWidget {
             displayBorder: true,
           ),
           StoryCard(
-            story: kardashian,
+            story: kendallAndFriends,
             avatar: kendallJenner,
             displayProfile: true,
             labelText: "kendall",
